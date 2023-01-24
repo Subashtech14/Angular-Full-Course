@@ -1,9 +1,11 @@
 <p>Welcome to the {{hotelname}}</p>
 <div [hidden]="hideRooms">
-    Number of : 
+    Number of :
     <div [innerText]="numberofRooms"></div>
 </div>
 {{  rooms.avaliableRooms  ?? "NO Rooms"}}
+
+{{roomList | json}}
 <div *ngIf="rooms?.avaliableRooms">
     Rooms List
     <!-- {{roomList}} -->
@@ -11,22 +13,23 @@
         <tr>
             <th>Index</th>
             <th>Even/Odd</th>
-            <th>Room Number</th>
+            <th [ngStyle]="{color:'green'}">Room Number</th>
             <th>Room Type</th>
             <th>Room Price</th>
             <th>Room Amenities</th>
             <th>CheckIn Time</th>
         </tr>
-        <tr *ngFor="let room of roomList; let e=even; let o = odd; let i=index">
-        <td>{{i}}</td>
+        <tr [ngClass]="e ? 'even' : 'odd'"
+        *ngFor="let room of roomList; let e=even; let o = odd; let i=index">
+        <td>{{i | percent}}</td>
         <td>{{e ? "Even":"Odd"}}</td>
         <td>{{room.roomnumber}}</td>
         <td>{{room.roomType}}</td>
-        <td>{{room.price}}</td>
-        <td>{{room.amenities}}</td>
-        <td>{{room.checkinTime}}</td>
+        <td>{{room.price | currency : 'INR'}}</td>
+        <td>{{room.amenities | lowercase}}</td>
+        <td>{{room.checkinTime | date : 'dd/MMM/yyyy'}}</td>
 
         </tr>
     </table>
 </div>
-<button (click)="toogle()">Toogle</button> 
+<button (click)="toogle()">Toogle</button>
