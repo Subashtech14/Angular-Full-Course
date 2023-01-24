@@ -24,7 +24,8 @@ roomList :RoomList[]= [{
   price:500,
   photos:"https://images.unsplash.com/photo-1674082540761-440dc1b2326b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
   checkinTime:new Date("11-Nov-2021"),
-  checkoutTime:new Date("12-nov-2021")
+  checkoutTime:new Date("12-nov-2021"),
+  rating:4.5,
 },
 {
   roomnumber:2,
@@ -33,7 +34,8 @@ roomList :RoomList[]= [{
   price:1000,
   photos:"https://images.unsplash.com/photo-1674082540761-440dc1b2326b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
   checkinTime:new Date("11-Nov-2021"),
-  checkoutTime:new Date("12-nov-2021")
+  checkoutTime:new Date("12-nov-2021"),
+  rating:4,
 },
 {
   roomnumber:3,
@@ -42,7 +44,8 @@ roomList :RoomList[]= [{
   price:15000,
   photos:"https://images.unsplash.com/photo-1674082540761-440dc1b2326b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
   checkinTime:new Date("11-Nov-2021"),
-  checkoutTime:new Date("12-nov-2021")
+  checkoutTime:new Date("12-nov-2021"),
+  rating:3.5,
 }]
 toogle(){
 this.hideRooms =!this.hideRooms
